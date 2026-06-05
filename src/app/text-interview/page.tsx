@@ -1,4 +1,5 @@
 'use client'
+export const dynamic = "force-dynamic";
 
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from 'react'
@@ -30,9 +31,8 @@ interface InterviewFeedback {
 }
 
 export default function TextInterviewPage() {
-  const searchParams = useSearchParams();
-  const category = searchParams.get("category") ?? "general";
-  const count = searchParams.get("count") ?? "6";
+const category = "general";
+const count = "6";
 
   const { user, token } = useAuth()
   const router = useRouter()
